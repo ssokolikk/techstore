@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+🛒 TechStore
+Учебный проект — интернет-магазин электроники и гаджетов. 
+Разработан в рамках финальной работы по веб-программированию и дизайну.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Функционал
+- Загрузка каталога товаров с публичного API (DummyJSON).
+- Просмотр карточек товаров (название, цена, картинка).
+- Добавление товаров в корзину и удаление из нее.
+- Подсчет итоговой суммы заказа.
+- Валидация формы оформления заказа (имя, email, телефон).
+- Имитация успешной отправки заказа.
 
-Currently, two official plugins are available:
+🛠️ Стек технологий
+- TypeScript — типизация данных и интерфейсов.
+- React — построение пользовательского интерфейса (компонентный подход).
+- Redux Toolkit — управление глобальным состоянием (корзина, товары, асинхронные запросы).
+- React Router DOM — маршрутизация (переходы между страницами без перезагрузки).
+- React Bootstrap — стилизация и готовые UI-компоненты.
+- Vite — сборка проекта и запуск dev-сервера.
+- Axios — получение данных каталога с API.
+- Ky — отправка данных формы заказа (имитация POST-запроса).
+- Vest — валидация полей формы.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+⚙️ Как запустить проект локально
+1. Склонируйте репозиторий:
+   `git clone https://github.com/ssokolikk/techstore.git`
+2. Перейдите в папку проекта:
+   `cd techstore`
+3. Установите зависимости:
+   `npm install`
+4. Запустите сервер разработки:
+   `npm run dev`
+5. Откройте в браузере `http://localhost:5173/`
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+📦 Сборка проекта
+Чтобы собрать production-версию, выполните:
+`npm run build`
+Готовые файлы появятся в папке `dist`.
