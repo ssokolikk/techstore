@@ -1,0 +1,49 @@
+/* Подключаем современный шрифт Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fa; /* Светло-серый фон, чтобы белые карточки выделялись */
+  color: #333;
+}
+
+/* Делаем навигацию стильной и добавляем тень */
+.navbar {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff !important; /* Делаем шапку белой */
+}
+.navbar-brand, .nav-link {
+  color: #111 !important; /* Темный текст для шапки */
+  font-weight: 600;
+}
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* Стили для карточек товаров */
+.product-card {
+  border: none;
+  border-radius: 16px; /* Современные скругленные углы */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Карточка немного подпрыгивает при наведении */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+/* Современная кнопка "В корзину" */
+.btn-custom {
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #111;
+  color: #fff;
+  border: none;
+  transition: background-color 0.2s;
+}
+.btn-custom:hover {
+  background-color: #333;
+  color: #fff;
+}
